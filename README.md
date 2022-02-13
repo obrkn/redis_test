@@ -62,3 +62,11 @@ $ whenever # 確認
 $ /etc/init.d/cron stop # cron停止
 $ ps -aux # cron起動確認
 ```
+## Redis確認
+```sh:zsh
+$ docker-compose exec redis sh
+# redis-cli
+> keys *
+> type mykey
+> ZRANGE mykey 0 -1
+```
